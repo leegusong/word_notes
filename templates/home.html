@@ -5,11 +5,20 @@
     <title>Title</title>
 </head>
 <body>
-{% extends "layout.html" %}
 {% block content %}
   <div class="jumbo">
-    <h2>Welcome to the Flask app<h2>
-    <h3>This is the home page for the Flask app<h3>
+    <h2>단어 맞추기<h2>
+        <hr>
+        <h3 class="text-info">{{word}}</h3>
+    <hr>
+    <br>
+    <table border="1">
+        {% for i in other %}
+        <tr>
+        <td>{{i}}</td>
+        </tr>
+        {% endfor %}
+    </table>
   </div>
 {% endblock %}
 </body>
